@@ -4,6 +4,7 @@ import { ProductListComponentComponent } from "./product-list-component/product-
 import { FatherComponent } from './father/father.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { PropertyBindingComponent } from "./property-binding/property-binding.component";
+import { TwoWayBindingComponent } from "./two-way-binding/two-way-binding.component";
 //import { NewComponentComponent } from "./new-component/new-component.component";
 //import { NewComponentInlineComponent } from "./new-component-inline/new-component-inline.component";
 //import { InterpolationComponent } from "./interpolation/interpolation.component";
@@ -13,7 +14,7 @@ import { PropertyBindingComponent } from "./property-binding/property-binding.co
   selector: 'app-root',
   standalone: true,
   //imports: [RouterOutlet, NewComponentComponent, NewComponentInlineComponent, InterpolationComponent, FatherComponent],
-  imports: [RouterOutlet, PropertyBindingComponent],
+  imports: [RouterOutlet, TwoWayBindingComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
