@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <div class="d-flex justify-content-center">
+        <div class="w-50">
+            <div class="mb-3 mt-3">
+                <label for="text">Enter text here:</label>
+                <input type="text" class="form-control" placeholder="Enter text here" (input)="setText($event)">
+            </div>
+            <div class="mb-3">
+                <label for="replicarTexto">Replied text:</label>
+                <input id="replicarTexto" type="text" class="form-control" [value]="text" readonly/>
+            </div>
+        </div>
+    </div>
+</div>
