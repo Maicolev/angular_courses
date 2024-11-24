@@ -1,0 +1,14 @@
+<div class="container text-center mt-5 text-center">
+    <h2>Conditionals test</h2>
+    @if (isAutenticated){
+        <div class="alert alert-success">
+            You are authenticated
+        </div>
+    }
+    @else{
+        <div class="alert alert-danger">
+            You are not authenticated
+        </div>
+    }
+    <button class="btn btn-primary" (click)="alternateAutenticated()">Toggle</button>   
+</div>
