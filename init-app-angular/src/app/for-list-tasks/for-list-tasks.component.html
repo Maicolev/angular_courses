@@ -1,5 +1,5 @@
 <div class="container text-center">
-    <h2>add task</h2>
+    <h2>Task list</h2>
     <div class="d-flex justify-content-center">
         <input type="text" #taskInput class="form-control mb-3" placeholder="Type your task here">
     </div>
@@ -7,8 +7,10 @@
         <button class="btn btn-primary" (click)="addTask(taskInput.value); taskInput.value = ''">Add Task</button>
     </div>
     <div class="alert alert-success mt-4 mx-auto w-50">
-        @if (task) {
-            Task: {{task}}
+        @if (tasks) {
+            @for (task of tasks; track $index) {
+                <li>{{task}}</li>
+            }
         }
     </div>
 </div>
