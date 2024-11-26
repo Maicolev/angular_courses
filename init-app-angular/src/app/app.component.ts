@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ForListTasksComponent } from "./for-list-tasks/for-list-tasks.component";
+import { OnlineShopComponent } from './online-shop/online-shop.component';
 /**
 import { RouterOutlet } from '@angular/router';
 import { ProductListComponentComponent } from "./product-list-component/product-list-component.component";
@@ -12,13 +12,14 @@ import { NewComponentComponent } from "./new-component/new-component.component";
 import { NewComponentInlineComponent } from "./new-component-inline/new-component-inline.component";
 import { InterpolationComponent } from "./interpolation/interpolation.component";
 import { ConditionalsComponent } from "./conditionals/conditionals.component";
-import { LocalReferenceComponent } from "./local-reference/local-reference.component";
+import { ForListTasksComponent } from "./for-list-tasks/for-list-tasks.component";
+
 **/
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ForListTasksComponent],
+  imports: [OnlineShopComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
