@@ -17,6 +17,10 @@ export class OnlineShopComponent {
  }
 
   addProduct(description: string, price: number): void {
+    if( Number.isNaN(price) ||price <= 0 || description.trim() === '') {
+      console.log('Invalid product');
+      return;
+    }
     let newProduct = new product(description, price);
     this.products.push(newProduct);
   }

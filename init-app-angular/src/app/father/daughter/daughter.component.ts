@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-daughter',
@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrl: './daughter.component.css'
 })
 export class DaughterComponent {
+
+  // !: non-null operator assertion - i promise that this variable is initialized later
+  @Input() message!: string;
+
   private title = 'Daughter component works';
 
   //typeScript getter
