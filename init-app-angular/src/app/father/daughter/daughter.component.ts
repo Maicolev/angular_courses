@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-daughter',
@@ -11,6 +11,7 @@ export class DaughterComponent {
 
   // !: non-null operator assertion - i promise that this variable is initialized later
   @Input() message!: string;
+  @Output() notifyFather = new EventEmitter<string>();
 
   private title = 'Daughter component works';
 
@@ -22,5 +23,9 @@ export class DaughterComponent {
   //JavaScript getter
   getTitle() {
     return this.title;
+  }
+
+  sendMessage() {
+    this.notifyFather.emit('Message from daughter component to father component');
   }
 }

@@ -1,3 +1,7 @@
 <p>Component father works!</p>
 
-<app-daughter [message]="fatherMessage"></app-daughter>
+<div class="container">
+    <h3 class="text-primary">Component father message to daughter</h3>
+    <app-daughter [message]="fatherMessage" (notifyFather)="receiveMessage($event)"></app-daughter>
+    <p class="mt-3 alert alert-info w-50 mx-auto" >{{message}}</p>
+</div>
