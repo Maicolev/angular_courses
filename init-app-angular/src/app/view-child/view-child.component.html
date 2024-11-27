@@ -1,5 +1,16 @@
 <div class="container">
-    <h3 class="text-center text-primary">Dom access element</h3>
-    <input type="text" class="form-control w-50 mx-auto" #inputElement placeholder="Type something here">
-    <button class="btn btn-success mt-2" (click)="changeText()">Change text</button>
+    <h3 class="text-center text-primary">Dom access element, normal view child</h3>
+    <input type="text" class="form-control mt-4 w-50 mx-auto" #inputElement placeholder="Type something here">
+    <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-success" (click)="changeText()">Change text</button>
+    </div>
+</div>
+
+
+<div class="container">
+    <h3 class="text-center text-primary">Dom access element, view child from child to father</h3>
+    <app-child></app-child>
+    <div class="d-flex justify-content-center mt-4">
+        <button class="btn btn-success" (click)="changeTextChild()">Change text to child</button>
+    </div>
 </div>
