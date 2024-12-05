@@ -1,34 +1,45 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { product } from '../product';
-import { FormProductListComponent } from '../form-product-list/form-product-list.component';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Product } from '../product/product';
 
 @Component({
   selector: 'app-form-product-add',
   standalone: true,
-  imports: [FormProductListComponent],
+  imports: [],
   templateUrl: './form-product-add.component.html',
   styleUrl: './form-product-add.component.css'
 })
-export class FormProductAddComponent implements AfterViewInit{
+export class FormProductAddComponent{
 
-  @ViewChild(FormProductListComponent) formProductListComponent!: FormProductListComponent;
+  @ViewChild('descriptionInput') descriptionInput!: ElementRef;
+  @ViewChild('priceInput') priceInput!: ElementRef;
+  @Output() newProduct = new EventEmitter<Product>();
 
-  ngAfterViewInit() {
+  /**ngAfterViewInit() {
     // Ensure the formProductListComponent is initialized
     if (this.formProductListComponent) {
       console.log('FormProductListComponent is initialized');
     } else {
       console.warn('FormProductListComponent is not initialized');
     }
-  }
+  }**/
 
-  addProduct(description: string, price: number) {
-    console.log('add product ---- init form product add');
-    console.log(description);
-    console.log(price);
-    console.log('add product ---- end form product add');
-    let newProduct = new product(description, price);
-    this.formProductListComponent.addProduct(newProduct);
-    //return new product(description, price);
+  addProduct(event: Event) {
+    event.preventDefault();
+
+    // values check
+    if(this.descriptionInput.nativeElement.value.trim() === ''
+       ||this.priceInput === null
+       ||this.priceInput.nativeElement.valueAsNumber <= 0) {
+        console.warn('Empty or invalid product');
+        return;
+    }
+    const product = new Product(this.descriptionInput.nativeElement.value, this.priceInput.nativeElement.valueAsNumber);
+
+    // add product to list and emit event
+    this.newProduct.emit(product);
+
+    //reset input values
+    this.descriptionInput.nativeElement.value = '';
+    this.priceInput.nativeElement.value = '';
   }
 }

@@ -1,4 +1,4 @@
-export class product {
+export class Product {
     /**_description: string;
     _price: string;
   
