@@ -1,5 +1,5 @@
-<div class="container mt-5">
-    <h1 class="text-center">Online Shop</h1>
+<!--div class="container mt-5">
+
     <h3 class="text-center">Products list</h3>
     <ul class="list-group w-50 mx-auto">
         @if (products) {
@@ -20,4 +20,10 @@
         <input class="form-control mb-3" type="number" #productPriceInput placeholder="Price">
         <button class="btn btn-primary mb-3" (click)="addProduct(productDescInput.value, productPriceInput.valueAsNumber); productDescInput.value = ''">Add</button>
     </div>
+</div-->
+
+<div class="container mt-5">
+    <h1 class="text-center">Online Shop</h1>
+    <app-form-product-list></app-form-product-list>
+    <app-form-product-add></app-form-product-add>
 </div>

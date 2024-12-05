@@ -1,0 +1,12 @@
+<h3 class="text-center">Products list</h3>
+<ul class="list-group w-50 mx-auto">
+    @if (products) {
+        @for (product of products; track $index) {
+            <li class="list-group-item">
+                <span class="badge bg-primary">{{$index + 1}}</span>
+                {{product.description}},
+                <span class="badge bg-primary">{{product.price}}</span>
+            </li>
+        }
+    }
+</ul>
