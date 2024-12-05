@@ -24,6 +24,7 @@ export class FormProductAddComponent{
   }**/
 
   addProduct(event: Event) {
+    //for not auto-refresh
     event.preventDefault();
 
     // values check
