@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { OnlineShopComponent } from './online-shop/online-shop.component';
 import { MessageService } from './message.service';
+import { UsersListComponent } from "./users-list/users-list.component";
 /**
 import { RouterOutlet } from '@angular/router';
 import { ProductListComponentComponent } from "./product-list-component/product-list-component.component";
@@ -15,12 +15,13 @@ import { ConditionalsComponent } from "./conditionals/conditionals.component";
 import { ForListTasksComponent } from "./for-list-tasks/for-list-tasks.component";
 import { FatherComponent } from './father/father.component';
 import { ViewChildComponent } from "./view-child/view-child.component";
+import { OnlineShopComponent } from './online-shop/online-shop.component';
 **/
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [OnlineShopComponent],
+  imports: [UsersListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
