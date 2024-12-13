@@ -26,4 +26,11 @@ export class FormProductListComponent {
     });
     console.log('FormProductListComponent');
   }
+
+  addProduct(product: Product) {
+    console.log('addProduct');
+    console.log(product.title);
+    this.products.push(product);
+    console.log(this.products);
+  }
 }

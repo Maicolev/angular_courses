@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../product/product';
 import { FakeStoreService } from '../../fake-store.service';
 import { FormsModule } from '@angular/forms';
+import { FormProductListComponent } from '../form-product-list/form-product-list.component';
 
 @Component({
   selector: 'app-form-product-add',
@@ -29,7 +30,7 @@ export class FormProductAddComponent{
     }
   }**/
 
-  constructor(private fakeStoreService: FakeStoreService) {}
+  constructor(private formProductListComponent: FormProductListComponent) {}
 
   addProduct(event: Event) {
     //for not auto-refresh
@@ -45,7 +46,7 @@ export class FormProductAddComponent{
     const product = new Product(this.descriptionInput, this.priceInput);
 
     // add product to list and emit event
-    this.fakeStoreService.addProduct(product);
+    this.formProductListComponent.addProduct(product);
 
     //reset input values
     this.descriptionInput = '';
