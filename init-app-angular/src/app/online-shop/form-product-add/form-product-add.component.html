@@ -1,7 +1,7 @@
 <h3 class="text-succes mt-4 text-center">Add new product</h3>
 
 <form class="d-flex align-items-center bd-highlight mb-3 w-50 mx-auto" (submit)="addProduct($event)" >
-    <input class="form-control mb-3" type="text" #descriptionInput placeholder="Description">
-    <input class="form-control mb-3" type="number" #priceInput placeholder="Price">
+    <input class="form-control mb-3" type="text"  name="Description" [(ngModel)] = "descriptionInput" placeholder="Description">
+    <input class="form-control mb-3" type="number" name="Price" [(ngModel)] = "priceInput" placeholder="Price">
     <button type="submit" class="btn btn-primary mb-3">Add</button>
 </form>
