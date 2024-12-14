@@ -18,7 +18,11 @@ export class FormProductListComponent {
     /**new Product('iPhone 16 pro max', 1200),
     new Product('iPhone 15 pro max', 1100)**/
   ];
-  constructor(private fakeStoreService: FakeStoreService) {}
+  constructor(private fakeStoreService: FakeStoreService) {
+    this.fakeStoreService.detailProductEmitter.subscribe((product: Product) =>
+      alert(`Product detail: ${product.title}, ${product.price}`)
+    );
+  }
 
   ngOnInit() {
     this.fakeStoreService.getProducts().subscribe((data) => {

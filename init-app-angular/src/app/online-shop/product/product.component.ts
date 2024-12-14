@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Product } from './product';
+import { FakeStoreService } from '../../fake-store.service';
 
 @Component({
   selector: 'app-product',
@@ -9,5 +10,12 @@ import { Product } from './product';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
+
   @Input() product!: Product;
+
+constructor(private fakestoreService: FakeStoreService) {}
+
+emitProductDetail() {
+  this.fakestoreService.detailProductEmitter.emit(this.product);
+}
 }
