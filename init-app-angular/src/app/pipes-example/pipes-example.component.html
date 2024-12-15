@@ -9,7 +9,10 @@
                         Born Date: {{employe.born | date:'longDate'}}
                     </small>
                 </div>
-                <span>{{employe.salary | currency}}</span>
+                <span class="success badge-pill badge-primary">
+                    {{employe.salary | currency:'USD':true:'1.2-2'}}
+                </span>
+            </li>
         }
     </ul>
 </div>
