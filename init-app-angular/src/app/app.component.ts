@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MessageService } from './message.service';
-import { OnlineShopComponent } from "./online-shop/online-shop.component";
+import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 /**
 import { RouterOutlet } from '@angular/router';
 import { ProductListComponentComponent } from "./product-list-component/product-list-component.component";
@@ -21,7 +21,7 @@ import { OnlineShopComponent } from './online-shop/online-shop.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [OnlineShopComponent],
+  imports: [PipesExampleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
