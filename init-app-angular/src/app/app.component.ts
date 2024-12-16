@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MessageService } from './message.service';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
+import { BudgetAppComponent } from "./budget-app/budget-app.component";
 /**
 import { RouterOutlet } from '@angular/router';
 import { ProductListComponentComponent } from "./product-list-component/product-list-component.component";
@@ -21,7 +22,7 @@ import { OnlineShopComponent } from './online-shop/online-shop.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PipesExampleComponent],
+  imports: [PipesExampleComponent, BudgetAppComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

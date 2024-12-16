@@ -1,0 +1,13 @@
+<form class="d-flex justify-content-between align-items-center my-4 w-50 mx-auto"
+    (submit)="addTransaction($event)">
+    <input type="text" id="description" name="description"
+        placeholder="Product description" class="form-control me-2 w-75"
+        autocomplete="off"
+        [(ngModel)]="descriptionInput" />
+
+    <input type="number" id="price" name="price"
+        placeholder="Price" class="form-control me-2 w-25"
+        [(ngModel)]="priceInput" />
+        
+    <button type="submit" class="btn btn-primary">Check</button>   
+</form>
