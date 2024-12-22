@@ -1,0 +1,18 @@
+<div class="container text-center">
+    <div class="d-flex justify-content-center">
+        <div class="w-50">
+            <div class="mb-3 mt-3">
+                <label for="inputOperatorA">Operator A:</label>
+                <input id="inputOperatorA" type="number" class="form-control" [(ngModel)]="operatorA">
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="inputOperatorB">Operator B:</label>
+                <input id="inputOperatorB" type="number" class="form-control" [(ngModel)]="operatorB">
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" (click)="sum()">Sum</button>
+                <div class="alert alert-success mt-4 mx-auto w-50"> {{result}}</div>
+            </div>
+        </div>
+    </div>

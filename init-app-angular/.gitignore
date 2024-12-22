@@ -1,0 +1,70 @@
+# Compiled output
+dist/
+tmp/
+out-tsc/
+
+# Dependencies
+node_modules/
+# Except for binaries that are useful for CI/CD
+!node_modules/.bin
+
+# Angular State
+.angular/
+
+# Angular CLI specific files
+.angular-cli.json
+.angular/
+
+# IDEs and editors
+.idea/
+.vscode/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# IDE - VSCode
+.history
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# System files
+.PSCPermanent\ Items
+.DS_Store?
+._*
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary cache files
+# Lerna
+lerna-debug.log
+.yarn-integrity
+*.tsbuildinfo
+.next/
+
+# Compiled output
+# ts-prune
+ts-prune.txt
+
+# Storybook files
+.out/

@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <ul class="list-group">
+            @if (users.length > 0) {
+                @for (user of users; track user.id) {
+                    <li class="list-group-item"> {{user.id}} {{user.name}} </li>
+                }
+            }@else {
+                <li class="list-group-item text-danger"> Don't have any users </li>
+            }
+        </ul>
+    </div>
+
+</div>

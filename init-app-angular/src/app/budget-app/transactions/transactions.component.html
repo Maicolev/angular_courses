@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <app-form></app-form>
+
+  <div class="row mt-4">
+      <!-- Incomes Section -->
+      <div class="col-md-6 mb-4">
+          <h3 class="text-center text-success">Incomes</h3>
+          <ul class="list-group">
+              @for(incomeElement of incomes; track incomeElement) {
+                  <app-income [income]="incomeElement" class="list-group-item mb-2 shadow-sm"/>
+              }
+          </ul>
+      </div>
+
+      <!-- Expenses Section -->
+      <div class="col-md-6 mb-4">
+          <h3 class="text-center text-danger">Expenses</h3>
+          <ul class="list-group">
+              @for(expenseElement of expenses; track expenseElement) {
+                  <app-expenses [expenses]="expenseElement" class="list-group-item mb-2 shadow-sm"/>
+              }
+          </ul>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+    <h3 class="text-center">Pipes Example</h3>
+    <ul class="list-group w-50 mx-auto">
+        @for (employe of employes; track employe) {
+            <li class="list-group-item d-justify-content-between d-align-items-center">
+                <div>
+                    <h5 class="mb-1">{{employe.name | uppercase}}</h5>
+                    <small class="text-muted">
+                        Born Date: {{employe.born | date:'longDate'}}
+                    </small>
+                </div>
+                <span class="success badge-pill badge-primary">
+                    {{employe.salary | currency:'USD':true:'1.2-2'}}
+                </span>
+            </li>
+        }
+    </ul>
+</div>
